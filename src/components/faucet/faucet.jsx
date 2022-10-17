@@ -47,8 +47,9 @@ const FaucetComp = () => {
                                     pattern="[0][x][a-zA-Z0-9]{40}"
                                     title="Incorrect wallet address"
                                     placeholder="0x00000000000000"
-                                    aria-label="Your wallet address"/>
-
+                                    aria-label="Your wallet address"
+                                    required
+                                    minlength="1"/>
                                 <button type="submit"
                                         className="px-4 py-3 text-sm font-medium tracking-wider text-gray-100 uppercase transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:bg-gray-600 focus:outline-none">Get
                                     TUSD
