@@ -37,7 +37,9 @@ const FaucetComp = () => {
                             action="/thank-you"
                             data-netlify="true">
                             <input type="hidden" name="form-name" value="faucet" />
-                            
+                             
+
+                             
                             <div
                                 className="flex flex-col p-1.5 overflow-hidden border rounded-lg dark:border-gray-600 lg:flex-row dark:focus-within:border-blue-300 focus-within:ring focus-within:ring-opacity-40 focus-within:border-blue-400 focus-within:ring-blue-300">
                                 <input
