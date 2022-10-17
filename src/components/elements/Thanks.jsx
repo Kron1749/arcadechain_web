@@ -1,4 +1,4 @@
-import ERC20 from "../elements/ERC200"
+import ERC20 from "../elements/ERC20"
 export const ThankYouComp = () => {
     return (
         <div className="grid place-items-center mt-80 mb-80 pb-20">
