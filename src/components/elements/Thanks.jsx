@@ -1,5 +1,3 @@
-import React from "react";
-import Image from "next/image";
 import ERC20 from "../elements/erc20"
 export const ThankYouComp = () => {
     return (

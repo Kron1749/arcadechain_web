@@ -1,8 +1,6 @@
-import Script from "next/script"
 import { useMoralis } from "react-moralis";
 
-
-export default function ERC20({chainId,tokenAddress,tokenSymbol,tokenDecimals}) {   
+function ERC20({chainId,tokenAddress,tokenSymbol,tokenDecimals}) {
     const {isAuthenticated,authenticate} = useMoralis()
     let currentChainId
       async function switchChain() {
@@ -28,7 +26,7 @@ export default function ERC20({chainId,tokenAddress,tokenSymbol,tokenDecimals}) 
 
     const addToken = async () => {     
         if(!isAuthenticated) {
-            await authenticate({signingMessage: "Log in to interact with arcadeChain" })
+            await authenticate({signingMessage: "Log in to interact with Arcade Chain" })
         } 
         currentChainId = await ethereum.request({
             method: 'eth_chainId',
@@ -49,3 +47,4 @@ export default function ERC20({chainId,tokenAddress,tokenSymbol,tokenDecimals}) 
 }
 
 
+export default ERC20;
