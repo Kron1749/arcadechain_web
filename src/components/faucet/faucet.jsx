@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import ERC20 from "../elements/erc20"
+import ERC20 from "../elements/ERC20"
 
 
 
