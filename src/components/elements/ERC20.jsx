@@ -1,6 +1,6 @@
 import { useMoralis } from "react-moralis";
 
-function ERC20({chainId,tokenAddress,tokenSymbol,tokenDecimals}) {
+function ERC20({color,chainId,tokenAddress,tokenSymbol,tokenDecimals}) {
     const {isAuthenticated,authenticate} = useMoralis()
     let currentChainId
       async function switchChain() {
@@ -38,7 +38,7 @@ function ERC20({chainId,tokenAddress,tokenSymbol,tokenDecimals}) {
     }
         return(
             <>
-                        <button onClick={addToken} className="relative h-10 w-32 font-poppins text-sm font-bold text-white md:h-[54px] md:w-[180px] md:text-base" >
+                        <button onClick={addToken} className={`relative h-10 w-32 font-poppins text-sm font-bold text-${color} md:h-[54px] md:w-[180px] md:text-base`} >
                             <p className="relative z-20">Add TUSD to Metamask</p>        
                             <img layout="fill" className="absolute inset-0" src={"/images/btn-gradient-transparent.webp"} alt="button gradient" />                        
                         </button>

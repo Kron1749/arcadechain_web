@@ -1,10 +1,11 @@
 import ERC20 from "../elements/ERC20"
+import Network from "../elements/Network";
 export const ThankYouComp = () => {
     return (
         <div className="grid place-items-center mt-80 mb-80 pb-20">
             <div className="w-full max-w-sm px-4 py-3 bg-white rounded-md shadow-md dark:bg-gray-800">
                 <div className="flex items-center justify-between">
-                    <span className="text-sm font-light text-gray-800 dark:text-gray-400 font-bold">Thank you.</span>
+                    <span className="text-sm text-gray-800 dark:text-gray-400 font-bold">Thank you.</span>
                 </div>
 
                 <div>
@@ -15,7 +16,10 @@ export const ThankYouComp = () => {
                 </div>
             </div>
             <div className="flex justify-center max-w-md mx-auto mt-8 gap-x-6 md:mt-5 md:gap-x-10">
-                <ERC20 chainId='0x152' tokenAddress = '0x912aAEA32355DA6FeB20D98E73B9C81B5afd6A2e' tokenSymbol = 'TUSD'  tokenDecimals={18}/>
+                <ERC20 color="white" chainId='0x152' tokenAddress = '0x912aAEA32355DA6FeB20D98E73B9C81B5afd6A2e' tokenSymbol = 'TUSD'  tokenDecimals={18}/>
+            </div>
+            <div className="flex justify-center max-w-md mx-auto mt-8 gap-x-6 md:mt-5 md:gap-x-10">
+                <Network color="white" chainId='0x152' chainName="Cronos Testnet" rpcUrls="https://cronos-testnet-3.crypto.org:8545" nameOfNativeCurrency="TCRO" blockExplorerUrls="https://cronos.crypto.org/explorer/testnet3"/>
             </div>
         </div>
     );

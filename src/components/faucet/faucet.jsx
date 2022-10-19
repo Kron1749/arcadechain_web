@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import ERC20 from "../elements/ERC20"
-
+import Network from "../elements/Network";
 
 
 const FaucetComp = () => {
@@ -29,9 +29,6 @@ const FaucetComp = () => {
                 
                 <div className="flex items-center justify-center pb-6 md:py-0 md:w-1/2">
                     <div className="mb-10">
-                        <div className="mb-2 ml-5">
-                            <ERC20 chainId='0x152' tokenAddress = '0x912aAEA32355DA6FeB20D98E73B9C81B5afd6A2e' tokenSymbol = 'TUSD'  tokenDecimals={18}/>
-                        </div>
                         <form name="faucet"
                             method="POST"
                             action="/thank-you"
@@ -51,7 +48,7 @@ const FaucetComp = () => {
                                     placeholder="0x00000000000000"
                                     aria-label="Your wallet address"
                                     required
-                                    minlength="1"/>
+                                    minLength="1"/>
                                 <button type="submit"
                                         className="px-4 py-3 text-sm font-medium tracking-wider text-gray-100 uppercase transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:bg-gray-600 focus:outline-none">Get
                                     TUSD
@@ -59,25 +56,33 @@ const FaucetComp = () => {
                             </div>
                         </form>
                     </div>
-                    
                 </div>
+
 
             </section>
-            <div className="grid place-items-center mb-80">
+            <div className="flex items-center justify-center pb-6 md:py-0 md:w-1/20">       
                 <div className="max-w-2xl px-8 py-4 bg-white rounded-lg shadow-md dark:bg-gray-800 mt-20">
                     <div className="mt-2">
-                        <p className="text-2xl font-bold text-gray-700 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 ">Use Cronos Test Network</p>
-                        <p className="mt-2 text-gray-600 ">We are using Cronos Test network for testing our blockchain functionality prior to production release.
-                            <a target='_blank' rel='noreferrer' href="https://chainlist.org/chain/338" className="underline">Please add Cronos Test network to your Network here</a>.
-                        Contract address of TUSD is
-                            <span className="font-bold font-mono"> 0x912aAEA32355DA6FeB20D98E73B9C81B5afd6A2e</span>
-                        </p>
+                        <p className="text-2xl font-bold text-gray-700 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 ">Use Cronos Test Network</p>     
+                        <div>
+                            <p className="mt-2 text-gray-600 ">We are using Cronos Test network for testing our blockchain functionality prior to production release.
+                            </p>
+                            <div className="flex mt-4">
+                                <Network color="black" chainId='0x152' chainName="Cronos Testnet" rpcUrls="https://cronos-testnet-3.crypto.org:8545" nameOfNativeCurrency="TCRO" blockExplorerUrls="https://cronos.crypto.org/explorer/testnet3"/>                                  
+                                <div className="ml-40">
+                                    <ERC20 color="black" chainId='0x152' tokenAddress = '0x912aAEA32355DA6FeB20D98E73B9C81B5afd6A2e' tokenSymbol = 'TUSD'  tokenDecimals={18}/>
+                                </div> 
+                            </div>                   
+                        </div>
+                        
+                    </div>  
 
-                    </div>
-
-
+                     
+                              
                 </div>
+                 
             </div>
+           
         </>
     )
 
