@@ -1,5 +1,6 @@
 import { useMoralis } from "react-moralis";
 
+
 function ERC20({color,chainId,tokenAddress,tokenSymbol,tokenDecimals}) {
     const {isAuthenticated,authenticate} = useMoralis()
     let currentChainId
