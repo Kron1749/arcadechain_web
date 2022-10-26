@@ -5,6 +5,7 @@ import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import Image from "next/image";
 import FaucetComp from "../components/faucet/faucet";
+import Rewards from "../components/rewards/reward";
 
 class Slot extends Component {
   render() {
@@ -63,10 +64,10 @@ class Slot extends Component {
           <Background />
           <Header />
 
-          <main className="mx-auto mt-16 max-w-container px-4 sm:mt-24 sm:px-10 3xl:px-0">
-
-          </main>
+          <main className="mx-auto mt-16 max-w-container px-4 sm:mt-24 sm:px-10 3xl:px-0"></main>
+          <Rewards />
           <Footer />
+
           <div className="absolute inset-x-0 bottom-0 -z-10 w-full">
             <div className="relative h-screen w-full lg:h-[120rem]">
               <Image
