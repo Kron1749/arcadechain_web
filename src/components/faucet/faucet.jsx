@@ -62,17 +62,19 @@ const FaucetComp = () => {
             </section>
             <div className="flex items-center justify-center pb-6 md:py-0 md:w-1/20">       
                 <div className="max-w-2xl px-8 py-4 bg-white rounded-lg shadow-md dark:bg-gray-800 mt-20">
-                    <div className="mt-2">
+                    <div className="mt-2 mb-4">
                         <p className="text-2xl font-bold text-gray-700 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 ">Use Cronos Test Network</p>     
                         <div>
                             <p className="mt-2 text-gray-600 ">We are using Cronos Test network for testing our blockchain functionality prior to production release.
                             </p>
-                            <div className="flex mt-4">
-                                <Network color="black" chainId='0x152' chainName="Cronos Testnet" rpcUrls="https://cronos-testnet-3.crypto.org:8545" nameOfNativeCurrency="TCRO" blockExplorerUrls="https://cronos.crypto.org/explorer/testnet3"/>                                  
-                                <div className="ml-40">
-                                    <ERC20 color="black" chainId='0x152' tokenAddress = '0x912aAEA32355DA6FeB20D98E73B9C81B5afd6A2e' tokenSymbol = 'TUSD'  tokenDecimals={18}/>
-                                </div> 
-                            </div>                   
+                                <div className="grid grid-cols-2 mt-2 ml-12">
+                                    <div className={"ml-5"}>
+                                        <Network color="black" chainId='0x152' chainName="Cronos Testnet" rpcUrls="https://cronos-testnet-3.crypto.org:8545" nameOfNativeCurrency="TCRO" blockExplorerUrls="https://cronos.crypto.org/explorer/testnet3"/>
+                                    </div>
+                                    <div>
+                                        <ERC20 color="black" chainId='0x152' tokenAddress = '0x912aAEA32355DA6FeB20D98E73B9C81B5afd6A2e' tokenSymbol = 'TUSD'  tokenDecimals={18}/>
+                                    </div>
+                                </div>
                         </div>
                         
                     </div>  

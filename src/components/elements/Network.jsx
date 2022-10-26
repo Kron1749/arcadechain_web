@@ -47,9 +47,9 @@ function Network({color,chainId,chainName,rpcUrls,nameOfNativeCurrency,blockExpl
 
     return(
         <>
-                    <button onClick={addChainByButtonClick} className={`relative h-10 w-32 font-poppins text-sm font-bold text-${color}  md:h-[54px] md:w-[180px] md:text-base`} >
-                        <p className="relative z-20">Add Cronos Testnet to Metamask</p>        
-                        <img layout="fill" className="absolute inset-0" src={"/images/btn-gradient-transparent.webp"} alt="button gradient" />                        
+                    <button onClick={addChainByButtonClick} className={`relative h-10 w-32 font-poppins text-sm font-bold text-${color} h-150px md:h-[54px] md:w-[180px] md:text-base`} >
+                        <p className="relative z-20">Add Cronos Testnet <br/>to Metamask</p>
+                        <img className="absolute inset-0 h-14 " src={"/images/btn-gradient-transparent.webp"} alt="add network button" />
                     </button>
         </>       
 )
